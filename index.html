@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jancer Mateo Connor - Curso de Trading</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Registro de Estudiantes - Curso de Trading</h1>
+        <label for="experienceFilter">Filtrar por nivel de experiencia:</label>
+        <select id="experienceFilter" onchange="filterTable()">
+            <option value="todos">Todos</option>
+            <option value="Principiante">Principiante</option>
+            <option value="Intermedio">Intermedio</option>
+            <option value="Avanzado">Avanzado</option>
+        </select>
+        <br><br>
+        <!-- Barra de búsqueda -->
+        <label for="searchInput">Buscar Estudiante por Nombre:</label>
+        <input type="text" id="searchInput" onkeyup="searchStudent()" placeholder="Buscar...">
+    </header>
+
+    <main>
+        <!-- Formulario de Registro -->
+        <section id="registerSection">
+            <h2>Registrar Nuevo Estudiante</h2>
+            <form id="registrationForm">
+                <label for="studentName">Nombre Completo:</label>
+                <input type="text" id="studentName" required><br>
+                
+                <label for="experienceLevel">Nivel de Experiencia:</label>
+                <select id="experienceLevel" required>
+                    <option value="Principiante">Principiante</option>
+                    <option value="Intermedio">Intermedio</option>
+                    <option value="Avanzado">Avanzado</option>
+                </select><br>
+                
+                <button type="submit">Registrar</button>
+            </form>
+        </section>
+
+        <!-- Tabla de estudiantes -->
+        <section id="studentsSection">
+            <h2>Estudiantes Registrados</h2>
+            <table id="studentsTable">
+                <thead>
+                    <tr>
+                        <th>Nº</th>
+                        <th>Nombre Completo</th>
+                        <th>Nivel de Experiencia</th>
+                    </tr>
+                </thead>
+                <tbody id="studentsList">
+                    <!-- Estudiantes ya registrados -->
+                    <tr data-experience="Principiante">
+                        <td>1</td>
+                        <td>Juan Pérez</td>
+                        <td>Principiante</td>
+                    </tr>
+                    <tr data-experience="Intermedio">
+                        <td>2</td>
+                        <td>Ana Gómez</td>
+                        <td>Intermedio</td>
+                    </tr>
+                    <tr data-experience="Avanzado">
+                        <td>3</td>
+                        <td>Carlos Fernández</td>
+                        <td>Avanzado</td>
+                    </tr>
+                    <tr data-experience="Principiante">
+                        <td>4</td>
+                        <td>María Rodríguez</td>
+                        <td>Principiante</td>
+                    </tr>
+                    <tr data-experience="Principiante">
+                        <td>5</td>
+                        <td>Jancer Mateo Connor</td>
+                        <td>Principiante</td>
+                    </tr>
+                    <tr data-experience="Intermedio">
+                        <td>6</td>
+                        <td>Wirlin Mora</td>
+                        <td>Intermedio</td>
+                    </tr>
+                    <tr data-experience="Principiante">
+                        <td>7</td>
+                        <td>Pedro Martínez</td>
+                        <td>Principiante</td>
+                    </tr>
+                    <tr data-experience="Avanzado">
+                        <td>8</td>
+                        <td>Lucía López</td>
+                        <td>Avanzado</td>
+                    </tr>
+                    <tr data-experience="Intermedio">
+                        <td>9</td>
+                        <td>Ricardo Sánchez</td>
+                        <td>Intermedio</td>
+                    </tr>
+                    <tr data-experience="Principiante">
+                        <td>10</td>
+                        <td>Sofía Torres</td>
+                        <td>Principiante</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Nueva sección de Estudiantes Rentables -->
+        <section id="profitableStudentsSection">
+            <h2>Estudiantes que han retirado dinero y son rentables</h2>
+            <ul>
+                <li><strong>Jancer Mateo Connor:</strong> Retiro de $10,000</li>
+                <li><strong>Wirlin Mora:</strong> Retiro de $20,000</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2024 Curso de Trading. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
+
+<footer>
+    <p>© 2024 Curso de Trading. Todos los derechos reservados.</p>
+    <p>Contáctame: <a href="mailto:jancermateo2@gmail.com">jancermateo2@gmail.com</a> | Teléfono: <a href="tel:+18295481136">829-548-1136</a></p>
+</footer>
+
+
+
+
